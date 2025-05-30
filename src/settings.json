@@ -12,7 +12,7 @@
   },
   "categories": [
     {
-      "name": "AI (Artificial Intelligence)",
+      "name": "Artificial Intelligence",
       "items": [
         {
           "name": "LuminAI",
@@ -32,6 +32,13 @@
             "text": "Teks atau perintah untuk chat AI",
             "model": "1See the list of supported AI models here: https://mind.hydrooo.web.id"
           }
+        },
+        {
+          "name": "Jadwal Sholat Ai",
+          "desc": "Jadwal sholat hari ini di Sambas, Kalimantan Barat",
+          "path": "/sholat/sambas",
+          "status": "ready",
+          "params": {}
         }
       ]
     },
