@@ -80,6 +80,20 @@
           }
         }
       ]
+    },
+    {
+      "name": "Search",
+      "items": [
+        {
+          "name": "Search Pinterest",
+          "desc": "Search Pinterest images by keyword",
+          "path": "/pinterest/search?q=",
+          "status": "ready",
+          "params": {
+            "q": "Keyword untuk mencari gambar di Pinterest"
+          }
+        }
+      ]
     }
   ]
 }
