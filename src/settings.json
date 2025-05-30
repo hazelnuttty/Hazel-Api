@@ -54,7 +54,7 @@
           "name": "Nsfw",
           "desc": "Random 18+ Picture",
           "path": "/random/nsfw",
-          "status": "ready"
+          "status": "comingsoon"
         }
       ]
     },
@@ -77,7 +77,7 @@
           "name": "Pinterest",
           "desc": "Download images or videos from Pinterest",
           "path": "/downloader/pinterest",
-          "status": "ready",
+          "status": "comingsoon",
           "params": {
             "url": "Pinterest post URL to download"
           }
@@ -86,7 +86,7 @@
           "name": "Bilibili",
           "desc": "Download video from Bilibili",
           "path": "/downloader/bilibili",
-          "status": "ready",
+          "status": "comingsoon",
           "params": {}
         }
       ]
@@ -107,7 +107,7 @@
           "name": "Search Pinterest",
           "desc": "Search Pinterest images by keyword",
           "path": "/search/pinterest/search?q=",
-          "status": "ready",
+          "status": "comingsoon",
           "params": {
             "q": "Keyword untuk mencari gambar di Pinterest"
           }
