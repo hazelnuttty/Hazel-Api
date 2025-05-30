@@ -20,7 +20,7 @@ module.exports = function(app) {
         }
     }
 
-    app.get('/ai/trueping', async (req, res) => {
+    app.get('/ai/chatgpt', async (req, res) => {
         const { text } = req.query;
 
         if (!text || typeof text !== 'string') {
