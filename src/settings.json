@@ -49,6 +49,12 @@
           "desc": "Random asupan video from internet",
           "path": "/random/asupan",
           "status": "ready"
+        },
+        {
+          "name": "Cekkhodam",
+          "desc": "Cek your khodam",
+          "path": "/random/cekkhodam",
+          "status": "ready"
         }
       ]
     },
