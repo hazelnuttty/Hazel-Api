@@ -64,10 +64,16 @@
         {
           "name": "Pinterest",
           "desc": "Download images or videos from Pinterest",
-          "path": "/downloader/pinterest?url=",
+          "path": "/downloader/pinterest",
           "status": "ready",
           "params": {
             "url": "Pinterest post URL to download"
+         },
+         {
+          "name": "Bilibili",
+          "desc": "Download video from Bilibili"
+          "path": "/downloader/bilibili"
+          "params": {}
           }
         }
       ]
