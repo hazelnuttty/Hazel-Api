@@ -1,7 +1,7 @@
 const axios = require('axios');
 const path = require('path');
 
-async function waifu() {
+async function neko() {
     try {
         const { data } = await axios.get(`https://raw.githubusercontent.com/hazelnuttty/API/main/waifu.json`);
         const imageUrl = data[Math.floor(data.length * Math.random())];
@@ -23,9 +23,9 @@ async function waifu() {
 }
 
 module.exports = function(app) {
-    app.get('/random/waifu', async (req, res) => {
+    app.get('/random/neko', async (req, res) => {
         try {
-            const { buffer, contentType } = await waifu(); // PERBAIKI NAMA FUNGSI
+            const { buffer, contentType } = await neko(); // PERBAIKI NAMA FUNGSI
             res.writeHead(200, {
                 'Content-Type': contentType,
                 'Content-Length': buffer.length,
