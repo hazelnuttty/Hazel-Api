@@ -1,9 +1,9 @@
 const axios = require('axios');
 const path = require('path');
 
-async function nsfw() {
+async function waifu() {
     try {
-        const { data } = await axios.get(`https://raw.githubusercontent.com/hazelnuttty/API/main/links.json`);
+        const { data } = await axios.get(`https://raw.githubusercontent.com/hazelnuttty/API/main/waifu.json`);
         const imageUrl = data[Math.floor(data.length * Math.random())];
         const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
 
@@ -23,9 +23,9 @@ async function nsfw() {
 }
 
 module.exports = function(app) {
-    app.get('/random/nsfw', async (req, res) => {
+    app.get('/random/waifu', async (req, res) => {
         try {
-            const { buffer, contentType } = await nsfw(); // PERBAIKI NAMA FUNGSI
+            const { buffer, contentType } = await waifu(); // PERBAIKI NAMA FUNGSI
             res.writeHead(200, {
                 'Content-Type': contentType,
                 'Content-Length': buffer.length,
