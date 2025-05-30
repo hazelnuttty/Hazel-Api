@@ -7,7 +7,7 @@
     "status": "Online!"
   },
   "apiSettings": {
-    "creator": "Hazel", 
+    "creator": "Hazel",
     "apikey": ["9xT7vLmQ2pZr"]
   },
   "categories": [
@@ -48,13 +48,13 @@
           "name": "Asupan",
           "desc": "Random asupan video from internet",
           "path": "/random/asupan",
-          "status": "ready"
+          "status": "eror"
         },
         {
           "name": "Cekkhodam",
           "desc": "Cek your khodam",
           "path": "/random/cekkhodam",
-          "status": "ready"
+          "status": "eror"
         }
       ]
     },
@@ -68,6 +68,20 @@
           "status": "ready",
           "params": {
             "q": "Search query"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Downloader",
+      "items": [
+        {
+          "name": "Pinterest",
+          "desc": "Download images or videos from Pinterest",
+          "path": "/downloader/pinterest?url=",
+          "status": "ready",
+          "params": {
+            "url": "Pinterest post URL to download"
           }
         }
       ]
