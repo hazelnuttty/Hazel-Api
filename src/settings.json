@@ -41,6 +41,15 @@
           "params": {
             "text": "Teks yang ingin kamu tanyakan ke trueping"
           }
+        },
+        {
+          "name": "ChatGPT",
+          "desc": "Ngobrol dengan ChatGPT gratis tanpa API key",
+          "path": "/ai/chatgpt?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau pertanyaan kamu ke ChatGPT"
+          }
         }
       ]
     },
