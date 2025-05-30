@@ -49,6 +49,12 @@
           "desc": "Random spiritual image generator",
           "path": "/random/cekkhodam",
           "status": "ready"
+        },
+        {
+          "name": "Nsfw",
+          "desc": "Random 18+ Picture",
+          "path": "/random/nsfw",
+          "status": "ready"
         }
       ]
     },
