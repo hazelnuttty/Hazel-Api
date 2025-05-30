@@ -1,23 +1,24 @@
 const axios = require('axios');
-const path = require('path');
 
 module.exports = function(app) {
+    // Array URL gambar langsung di sini
+    const images = [
+        "https://files.catbox.moe/u8xnb9.jpg",
+        "https://files.catbox.moe/6o9ixt.jpg"
+    ];
+
     async function khodam() {
         try {
-            // Ambil array URL dari JSON
-            const { data } = await axios.get('https://raw.githubusercontent.com/hazelnuttty/API/refs/heads/main/khodam.json');
+            // Pilih URL random dari array langsung
+            const imageUrl = images[Math.floor(Math.random() * images.length)];
 
-            // Pilih URL gambar secara acak
-            const imageUrl = data[Math.floor(Math.random() * data.length)];
-
-            // Dapatkan ekstensi file untuk tentukan Content-Type nanti
-            const ext = path.extname(imageUrl).toLowerCase();
-
-            // Download gambar sebagai arraybuffer
+            // Download gambar
             const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
 
-            // Return objek dengan buffer data dan ekstensi
-            return { buffer: Buffer.from(response.data), ext };
+            return {
+                buffer: Buffer.from(response.data),
+                ext: imageUrl.split('.').pop().toLowerCase()
+            };
         } catch (error) {
             throw error;
         }
@@ -25,22 +26,22 @@ module.exports = function(app) {
 
     app.get('/random/khodam', async (req, res) => {
         try {
-            const { buffer, ext } = await bluearchive();
+            const { buffer, ext } = await khodam();
 
-            // Map ekstensi ke content-type
+            // Map ekstensi ke content-type sederhana
             const mimeTypes = {
-                '.png': 'image/png',
-                '.jpg': 'image/jpeg',
-                '.jpeg': 'image/jpeg',
-                '.gif': 'image/gif',
-                '.webp': 'image/webp'
+                'png': 'image/png',
+                'jpg': 'image/jpeg',
+                'jpeg': 'image/jpeg',
+                'gif': 'image/gif',
+                'webp': 'image/webp'
             };
 
             const contentType = mimeTypes[ext] || 'application/octet-stream';
 
             res.writeHead(200, {
                 'Content-Type': contentType,
-                'Content-Length': buffer.length,
+                'Content-Length': buffer.length
             });
             res.end(buffer);
         } catch (error) {
