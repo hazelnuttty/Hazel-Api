@@ -73,6 +73,12 @@
           "desc": "Random 100++ Picture Anime",
           "path": "/random/neko",
           "status": "ready"
+        },
+        {
+          "name": "Baskara",
+          "desc": "Random Teks Sad",
+          "path": "/random/katakata",
+          "status": "ready"          
         }
       ]
     },
