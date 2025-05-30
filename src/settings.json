@@ -104,29 +104,29 @@
       ]
     },
     {
-      "name": "Downloader",
+      "name": "downloader",
       "items": [
         {
           "name": "Pinterest",
-          "desc": "Download images or videos from Pinterest",
+          "desc": "downloaderer images or videos from Pinterest",
           "path": "/downloader/pinterest",
           "status": "comingsoon",
           "params": {
-            "url": "Pinterest post URL to download"
+            "url": "Pinterest post URL to downloaderer"
           }
         },
         {
           "name": "Bilibili",
-          "desc": "Download video from Bilibili",
+          "desc": "downloaderer video from Bilibili",
           "path": "/downloader/bilibili",
           "status": "comingsoon",
           "params": {}
         },
         {
           "name": "Capcut",
-          "desc": "Downloader capcut",
+          "desc": "downloader capcut",
           "status": "ready",
-          "path": "/download/capcut?apikey=&url=",
+          "path": "/downloaderer/capcut?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL video capcut"
@@ -134,9 +134,9 @@
         },
         {
           "name": "Facebook",
-          "desc": "Downloader facebook",
+          "desc": "downloader facebook",
           "status": "ready",
-          "path": "/download/facebook?apikey=&url=",
+          "path": "/downloaderer/facebook?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL video facebook"
@@ -144,9 +144,9 @@
         },        
         {
           "name": "Gitclone",
-          "desc": "Downloader gitclone",
+          "desc": "downloader gitclone",
           "status": "ready",
-          "path": "/download/github?apikey=&url=",
+          "path": "/downloader/github?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL repository github"
@@ -154,9 +154,9 @@
         },
         {
           "name": "Instagram",
-          "desc": "Downloader instagram",
+          "desc": "downloaderer instagram",
           "status": "ready",
-          "path": "/download/instagram?apikey=&url=",
+          "path": "/downloader/instagram?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL video atau gambar instagram"
@@ -164,9 +164,9 @@
         },    
         {
           "name": "Snackvideo",
-          "desc": "Downloader snackvideo",
+          "desc": "downloaderer snackvideo",
           "status": "ready",
-          "path": "/download/snackvideo?apikey=&url=",
+          "path": "/downloader/snackvideo?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL video snackvideo"
@@ -174,9 +174,9 @@
         },
         {
           "name": "Spotify",
-          "desc": "Downloader spotify",
+          "desc": "downloaderer spotify",
           "status": "ready",
-          "path": "/download/spotify?apikey=&url=",
+          "path": "/downloader/spotify?apikey=&url=",
           "params": {
             "apikey": "API key kamu",
             "url": "URL lagu spotify"
