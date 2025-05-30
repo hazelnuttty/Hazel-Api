@@ -3,16 +3,17 @@ const axios = require('axios');
 module.exports = function(app) {
     async function getRandomAsupan() {
         try {
-            const { data: links } = await axios.get(
+            const { data } = await axios.get(
                 'https://raw.githubusercontent.com/hazelnuttty/API/main/asupan.json'
             );
 
-            const randomUrl = links[Math.floor(Math.random() * links.length)];
+            const list = data.asupan; // ⬅️ ini penting
+            const randomUrl = list[Math.floor(Math.random() * list.length)];
             const response = await axios.get(randomUrl, { responseType: 'arraybuffer' });
 
             return {
                 buffer: Buffer.from(response.data),
-                contentType: 'video/mp4' // sesuaikan kalo perlu
+                contentType: 'video/mp4'
             };
         } catch (err) {
             throw new Error('Gagal ambil asupan: ' + err.message);
