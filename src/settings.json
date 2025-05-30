@@ -23,14 +23,14 @@
             "text": "Text for luminai to respond to"
           }
         },
-       {
+        {
           "name": "HydroMind",
           "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
           "path": "/ai/hydromind?text=&model=",
           "status": "ready",
           "params": {
             "text": "Teks atau perintah untuk chat AI",
-            "model":"1See the list of supported AI models here: https://mind.hydrooo.web.id"
+            "model": "1See the list of supported AI models here: https://mind.hydrooo.web.id"
           }
         }
       ]
@@ -42,6 +42,12 @@
           "name": "Blue Archive",
           "desc": "Blue Archive Random Images",
           "path": "/random/ba",
+          "status": "ready"
+        },
+        {
+          "name": "Asupan",
+          "desc": "Random asupan video from internet",
+          "path": "/random/asupan",
           "status": "ready"
         }
       ]
@@ -59,6 +65,6 @@
           }
         }
       ]
-    }               
+    }
   ]
 }
