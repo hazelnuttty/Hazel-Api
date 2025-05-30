@@ -4,7 +4,7 @@
   "description": "Simple and easy to use API.",
   "bannerImage": "/src/banner.jpg",
   "header": {
-    "status": "Online!"
+    "status": "Active!"
   },
   "apiSettings": {
     "creator": "Hazel",
