@@ -24,14 +24,15 @@ async function nsfw() {
 
 module.exports = function(app) {
     app.get('/random/nsfw', async (req, res) => {
-    try {
-        const { buffer, contentType } = await nsfw(); // Ganti cekkhodam() jadi nsfw()
-        res.writeHead(200, {
-            'Content-Type': contentType,
-            'Content-Length': buffer.length,
-        });
-        res.end(buffer);
-    } catch (error) {
-        res.status(500).send(`Error: ${error.message}`);
-    }
-});
+        try {
+            const { buffer, contentType } = await nsfw();
+            res.writeHead(200, {
+                'Content-Type': contentType,
+                'Content-Length': buffer.length,
+            });
+            res.end(buffer);
+        } catch (error) {
+            res.status(500).send(`Error: ${error.message}`);
+        }
+    });
+}; // <== KAMU LUPA BAGIAN INI
