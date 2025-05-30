@@ -121,6 +121,42 @@
           "path": "/downloader/bilibili",
           "status": "comingsoon",
           "params": {}
+        },
+        {
+          "name": "Capcut",
+          "desc": "Downloader capcut",
+          "status": "ready",
+          "path": "/download/capcut?apikey=&url="
+        },
+        {
+          "name": "Facebook",
+          "desc": "Downloader facebook",
+          "status": "ready",
+          "path": "/download/facebook?apikey=&url="
+        },        
+        {
+          "name": "Gitclone",
+          "desc": "Downloader gitclone",
+          "status": "ready",
+          "path": "/download/github?apikey=&url="
+        },
+        {
+          "name": "Instagram",
+          "desc": "Downloader instagram",
+          "status": "ready",
+          "path": "/download/instagram?apikey=&url="
+        },    
+        {
+          "name": "Snackvideo",
+          "desc": "Downloader snackvideo",
+          "status": "ready",
+          "path": "/download/snackvideo?apikey=&url="                 
+        },
+        {
+          "name": "Spotify",
+          "desc": "Downloader spotify",
+          "status": "ready",
+          "path": "/download/spotify?apikey=&url="
         }
       ]
     },
