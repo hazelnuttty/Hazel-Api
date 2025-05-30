@@ -74,7 +74,8 @@
           "path": "/tools/cek-ip?ip=",
           "status": "ready",
           "params": {
-          "ip": "Alamat IP yang ingin dicek"
+            "ip": "Alamat IP yang ingin dicek"
+          }
         }
       ]
     },
