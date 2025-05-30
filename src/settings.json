@@ -51,9 +51,9 @@
           "status": "ready"
         },
         {
-          "name": "Waifu",
-          "desc": "Random Waifu Picture",
-          "path": "/random/waifu",
+          "name": "Neko",
+          "desc": "Random 100++ Picture Anime",
+          "path": "/random/neko",
           "status": "ready"
         }
       ]
