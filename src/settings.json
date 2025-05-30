@@ -51,10 +51,10 @@
           "status": "ready"
         },
         {
-          "name": "Nsfw",
-          "desc": "Random 18+ Picture",
-          "path": "/random/nsfw",
-          "status": "comingsoon"
+          "name": "Waifu",
+          "desc": "Random Waifu Picture",
+          "path": "/random/waifu",
+          "status": "ready"
         }
       ]
     },
