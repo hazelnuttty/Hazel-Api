@@ -7,14 +7,36 @@ module.exports = function(app) {
                 'https://raw.githubusercontent.com/hazelnuttty/API/main/asupan.json'
             );
 
-            const list = data.asupan; // ⬅️ ini penting
-            const randomUrl = list[Math.floor(Math.random() * list.length)];
-            const response = await axios.get(randomUrl, { responseType: 'arraybuffer' });
+            const list = data.asupan;
+            let attempt = 0;
+            let response;
 
-            return {
-                buffer: Buffer.from(response.data),
-                contentType: 'video/mp4'
-            };
+            while (attempt < 5) {
+                const randomUrl = list[Math.floor(Math.random() * list.length)];
+                try {
+                    response = await axios.get(randomUrl, {
+                        responseType: 'arraybuffer',
+                        headers: {
+                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+                            'Accept': '*/*'
+                        }
+                    });
+
+                    const contentType = response.headers['content-type'];
+                    if (!contentType || !contentType.startsWith('video')) {
+                        throw new Error('Bukan konten video: ' + contentType);
+                    }
+
+                    return {
+                        buffer: Buffer.from(response.data),
+                        contentType
+                    };
+                } catch (e) {
+                    attempt++;
+                }
+            }
+
+            throw new Error('Semua percobaan gagal dapatkan video valid.');
         } catch (err) {
             throw new Error('Gagal ambil asupan: ' + err.message);
         }
