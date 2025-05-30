@@ -43,6 +43,12 @@
           "desc": "Blue Archive Random Images",
           "path": "/random/ba",
           "status": "ready"
+        },
+        {
+          "name": "Cek Khodam",
+          "desc": "Random spiritual image generator",
+          "path": "/random/cekkhodam",
+          "status": "ready"
         }
       ]
     },
