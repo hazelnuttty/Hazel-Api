@@ -43,12 +43,6 @@
           "desc": "Blue Archive Random Images",
           "path": "/random/ba",
           "status": "ready"
-        },
-        {
-          "name": "Create Nomor",
-          "desc": "Create Random Nomor Whatsapp",
-          "path": "/random/createnomor",
-          "status": "ready"
         }
       ]
     },
@@ -65,7 +59,7 @@
           }
         },
         {
-          "name": "Jadwal Sholat Ai",
+          "name": "Jadwal Sholat",
           "desc": "Jadwal sholat hari ini di Sambas, Kalimantan Barat",
           "path": "/sholat/sambas",
           "status": "ready",
