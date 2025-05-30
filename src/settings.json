@@ -43,6 +43,12 @@
           "desc": "Blue Archive Random Images",
           "path": "/random/ba",
           "status": "ready"
+        },
+        {
+          "name": "Create Nomor",
+          "desc": "Create Random Nomor Whatsapp",
+          "path": "/random/createnomor",
+          "status": "ready"
         }
       ]
     },
