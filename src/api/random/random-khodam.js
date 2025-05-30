@@ -4,7 +4,7 @@ module.exports = function(app) {
     async function getRandomKhodam() {
         try {
             const { data } = await axios.get(
-                'https://raw.githubusercontent.com/hazelnuttty/API/refs/heads/main/khodam.json'
+                'https://raw.githubusercontent.com/hazelnuttty/API/main/khodam.json'
             );
 
             const khodamList = data.khodam;
