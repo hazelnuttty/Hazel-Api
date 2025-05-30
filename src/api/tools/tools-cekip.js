@@ -1,29 +1,35 @@
-const axios = require('axios');
+const fetch = require('node-fetch');
 
-// ganti ini dengan IP yang mau dicek
-const targetIP = process.argv[2];
+module.exports = function(app) {
+    app.get('/search/ip', async (req, res) => {
+        const { ip } = req.query;
+        if (!ip) {
+            return res.status(400).json({ status: false, error: 'IP address is required' });
+        }
+        try {
+            // Contoh API: ip-api.com/json/{ip}
+            const response = await fetch(`http://ip-api.com/json/${ip}`);
+            const data = await response.json();
 
-if (!targetIP) {
-  console.error('Usage: node cek-ip.js <alamat-ip>');
-  process.exit(1);
+            if (data.status === 'fail') {
+                return res.status(404).json({ status: false, error: 'IP not found or invalid' });
+            }
+
+            // Kirim hasil info IP yang relevan
+            res.status(200).json({
+                status: true,
+                ip: data.query,
+                country: data.country,
+                region: data.regionName,
+                city: data.city,
+                isp: data.isp,
+                org: data.org,
+                timezone: data.timezone,
+                lat: data.lat,
+                lon: data.lon
+            });
+        } catch (error) {
+            res.status(500).json({ status: false, error: error.message });
+        }
+    });
 }
-
-axios.get(`https://ipwho.is/${targetIP}`)
-  .then(response => {
-    const data = response.data;
-    if (data.success) {
-      console.log('Info IP:');
-      console.log(`IP      : ${data.ip}`);
-      console.log(`Negara  : ${data.country}`);
-      console.log(`Region  : ${data.region}`);
-      console.log(`Kota    : ${data.city}`);
-      console.log(`ISP     : ${data.connection?.isp || 'Unknown'}`);
-      console.log(`Latitude: ${data.latitude}`);
-      console.log(`Longitude: ${data.longitude}`);
-    } else {
-      console.log(`Gagal: ${data.message}`);
-    }
-  })
-  .catch(err => {
-    console.error('Error:', err.message);
-  });
