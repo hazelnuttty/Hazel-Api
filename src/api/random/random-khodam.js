@@ -2,7 +2,7 @@ const axios = require('axios');
 const path = require('path');
 
 module.exports = function(app) {
-    async function bluearchive() {
+    async function khodam() {
         try {
             // Ambil array URL dari JSON
             const { data } = await axios.get('https://raw.githubusercontent.com/hazelnuttty/API/refs/heads/main/khodam.json');
