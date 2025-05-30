@@ -68,13 +68,14 @@
           "status": "ready",
           "params": {
             "url": "Pinterest post URL to download"
-         },
-         {
-          "name": "Bilibili",
-          "desc": "Download video from Bilibili"
-          "path": "/downloader/bilibili"
-          "params": {}
           }
+        },
+        {
+          "name": "Bilibili",
+          "desc": "Download video from Bilibili",
+          "path": "/downloader/bilibili",
+          "status": "ready",
+          "params": {}
         }
       ]
     },
@@ -93,7 +94,7 @@
         {
           "name": "Search Pinterest",
           "desc": "Search Pinterest images by keyword",
-          "path": "search/pinterest/search?q=",
+          "path": "/search/pinterest/search?q=",
           "status": "ready",
           "params": {
             "q": "Keyword untuk mencari gambar di Pinterest"
