@@ -7,15 +7,22 @@ module.exports = function(app) {
             return res.status(400).json({ status: false, error: 'IP address is required' });
         }
         try {
-            // Contoh API: ip-api.com/json/{ip}
             const response = await fetch(`http://ip-api.com/json/${ip}`);
+
+            // Tambahan pengecekan jika HTTP error
+            if (!response.ok) {
+                return res.status(response.status).json({
+                    status: false,
+                    error: `HTTP error! status: ${response.status} - ${response.statusText}`
+                });
+            }
+
             const data = await response.json();
 
             if (data.status === 'fail') {
-                return res.status(404).json({ status: false, error: 'IP not found or invalid' });
+                return res.status(404).json({ status: false, error: data.message || 'IP not found or invalid' });
             }
 
-            // Kirim hasil info IP yang relevan
             res.status(200).json({
                 status: true,
                 ip: data.query,
