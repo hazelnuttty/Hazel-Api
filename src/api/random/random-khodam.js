@@ -1,27 +1,70 @@
-const axios = require('axios');
-
 module.exports = function(app) {
-    async function getRandomKhodam() {
-        try {
-            const { data } = await axios.get(
-                'https://raw.githubusercontent.com/hazelnuttty/API/main/khodam.json'
-            );
+  const khodamList = [
+    "Rajapati",
+    "Singa Barong",
+    "Kyai Slamet",
+    "Nyi Roro Kidul",
+    "Macan Putih",
+    "Pangeran Samber Nyawa",
+    "Kanjeng Ratu Kidul",
+    "Eyang Jugo",
+    "Sunan Kalijaga",
+    "Eyang Sabdo Palon",
+    "Ratu Kalinyamat",
+    "Mbah Suro",
+    "Kyai Tunggul Wulung",
+    "Kanjeng Ratu Kencono Wungu",
+    "Eyang Prabu Siliwangi",
+    "Kyai Tapak Jalak",
+    "Ratu Ayu Sekar Kedaton",
+    "Kyai Nogo Sosro",
+    "Eyang Sunan Bonang",
+    "Ratu Dewi Lanjar",
+    "Jaka Tingkir",
+    "Sultan Agung",
+    "Pangeran Diponegoro",
+    "Nyai Roro Kidul II",
+    "Ki Ageng Suryomentaram",
+    "Sang Hyang Widhi",
+    "Batara Guru",
+    "Nyi Blorong",
+    "Kyai Slamet Riyadi",
+    "Eyang Paku Buwono",
+    "Putri Candrakirana",
+    "Sang Hyang Antaboga",
+    "Eyang Sekar Kedaton",
+    "Raden Wijaya",
+    "Sultan Hasanuddin",
+    "Ki Hajar Dewantara",
+    "Sri Sultan Hamengkubuwono",
+    "Pangeran Jayakarta",
+    "Kyai Jaka Samudro",
+    "Nyi Roro Kidul III",
+    "Sunan Giri",
+    "Ki Ageng Gribig",
+    "Ratu Boko",
+    "Ki Ageng Mangir",
+    "Pangeran Kusuma Bangsa",
+    "Nyi Endang Sari",
+    "Ki Ageng Pemanahan",
+    "Sang Hyang Dewa",
+    "Raden Patah",
+    "Kanjeng Sunan Kalijaga II",
+    "Eyang Nyi Roro Kidul",
+    "Pangeran Dipati Ukur",
+    "Sultan Agung Tirtayasa",
+    "Eyang Bathara Guru",
+    "Nyi Roro Kidul IV",
+    "Sunan Kudus",
+    "Ki Ageng Mangir II",
+    "Sang Hyang Tunggal",
+    "Raden Fatah",
+    "Kyai Ageng Selo",
+    "Nyi Roro Kidul V"
+  ];
 
-            const khodamList = data.khodam;
-            const randomKhodam = khodamList[Math.floor(Math.random() * khodamList.length)];
-
-            return { result: randomKhodam };
-        } catch (err) {
-            throw new Error('gagal ambil khodam sayangg: ' + err.message);
-        }
-    }
-
-    app.get('/random/khodam', async (req, res) => {
-        try {
-            const khodam = await getRandomKhodam();
-            res.json(khodam);
-        } catch (err) {
-            res.status(500).json({ error: err.message });
-        }
-    });
+  app.get('/random/khodam', (req, res) => {
+    const randomKhodam = khodamList[Math.floor(Math.random() * khodamList.length)];
+    res.json({ result: randomKhodam });
+  });
 };
