@@ -82,8 +82,9 @@
           "status": "ready",
           "params": {
             "q": "Search query"
+          }
         },
-        {          
+        {
           "name": "Search Pinterest",
           "desc": "Search Pinterest images by keyword",
           "path": "/pinterest/search?q=",
