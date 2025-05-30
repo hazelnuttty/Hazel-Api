@@ -1,24 +1,38 @@
 const axios = require('axios');
+
 module.exports = function(app) {
-    async function cekkhodam() {
+    app.get('/random/cekkhodam', async (req, res) => {
         try {
-            const { data } = await axios.get(`https://raw.githubusercontent.com/hazelnuttty/API/refs/heads/main/links.json`)
-            const response = await axios.get(data[Math.floor(data.length * Math.random())], { responseType: 'arraybuffer' });
-            return Buffer.from(response.data);
-        } catch (error) {
-            throw error;
-        }
-    }
-    app.get('/random/ba', async (req, res) => {
-        try {
-            const pedo = await bluearchive();
-            res.writeHead(200, {
-                'Content-Type': 'image/jpg',
-                'Content-Length': pedo.length,
+            const { nama, tgl } = req.query;
+
+            if (!nama || !tgl) {
+                return res.status(400).json({
+                    status: false,
+                    message: 'Parameter "nama" dan "tgl" (DD-MM-YYYY) wajib diisi.'
+                });
+            }
+
+            const linkKhodam = `https://api.botcahx.eu.org/api/cekhodam?nama=${encodeURIComponent(nama)}&tgl=${encodeURIComponent(tgl)}&apikey=free`;
+
+            const { data } = await axios.get(linkKhodam);
+
+            if (!data || data.status !== true) {
+                return res.status(500).json({
+                    status: false,
+                    message: 'Gagal mengambil data khodam.'
+                });
+            }
+
+            res.json({
+                status: true,
+                result: data.result
             });
-            res.end(pedo);
-        } catch (error) {
-            res.status(500).send(`Error: ${error.message}`);
+        } catch (err) {
+            res.status(500).json({
+                status: false,
+                message: 'Terjadi kesalahan pada server.',
+                error: err.message
+            });
         }
     });
 };
