@@ -1,25 +1,24 @@
 const axios = require('axios');
-const path = require('path');
 
 async function nsfw() {
     try {
-        const { data } = await axios.get('https://raw.githubusercontent.com/hazelnuttty/API/main/nsfw.json');
+        // Ambil data dari API nekorinn
+        const { data } = await axios.get('https://api.nekorinn.my.id/nsfwhub/bdsm');
 
-        // Filter hanya URL dengan ekstensi gambar yang valid
-        const validExtensions = ['.jpg', '.jpeg', '.png'];
-        const filteredData = data.filter(url => validExtensions.includes(path.extname(url).toLowerCase()));
-
-        if (filteredData.length === 0) {
-            throw new Error('No valid image URLs found in JSON');
+        // Validasi URL gambar dari respons
+        const imageUrl = data?.url;
+        if (!imageUrl || typeof imageUrl !== 'string') {
+            throw new Error('Invalid image URL in API response');
         }
 
-        const imageUrl = filteredData[Math.floor(Math.random() * filteredData.length)];
+        // Ambil gambar dalam bentuk buffer
         const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
 
-        const ext = path.extname(imageUrl).toLowerCase();
+        // Deteksi content-type berdasarkan ekstensi
+        const ext = imageUrl.split('.').pop().toLowerCase();
         let contentType = 'application/octet-stream';
-        if (ext === '.png') contentType = 'image/png';
-        else if (ext === '.jpg' || ext === '.jpeg') contentType = 'image/jpeg';
+        if (ext === 'png') contentType = 'image/png';
+        else if (ext === 'jpg' || ext === 'jpeg') contentType = 'image/jpeg';
 
         return {
             buffer: Buffer.from(response.data),
