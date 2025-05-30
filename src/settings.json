@@ -50,15 +50,6 @@
       "name": "Tools",
       "items": [
         {
-          "name": "YouTube",
-          "desc": "Video search",
-          "path": "/search/youtube?q=",
-          "status": "ready",
-          "params": {
-            "q": "Search query"
-          }
-        },
-        {
           "name": "Jadwal Sholat",
           "desc": "Jadwal sholat hari ini di Sambas, Kalimantan Barat",
           "path": "/sholat/sambas",
@@ -85,6 +76,14 @@
       "name": "Search",
       "items": [
         {
+          "name": "YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q=",
+          "status": "ready",
+          "params": {
+            "q": "Search query"
+        },
+        {          
           "name": "Search Pinterest",
           "desc": "Search Pinterest images by keyword",
           "path": "/pinterest/search?q=",
