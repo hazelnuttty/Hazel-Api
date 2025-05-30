@@ -32,6 +32,15 @@
             "text": "Teks atau perintah untuk chat AI",
             "model": "See the list of supported AI models here: https://mind.hydrooo.web.id"
           }
+        },
+        {
+          "name": "TruepingAI",
+          "desc": "AI cewek manja berbahasa Indonesia 🧸🎀",
+          "path": "/ai/luminai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks yang ingin kamu tanyakan ke trueping"
+          }
         }
       ]
     },
