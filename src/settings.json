@@ -67,6 +67,15 @@
           "path": "/sholat/sambas",
           "status": "ready",
           "params": {}
+        },
+        {
+          "name": "Cek Alamat IP",
+          "desc": "Cek info lokasi dan ISP dari alamat IP",
+          "path": "/tools/cek-ip?ip=",
+          "status": "ready",
+          "params": {
+            "ip": "Alamat IP yang ingin dicek"
+          }
         }
       ]
     },
