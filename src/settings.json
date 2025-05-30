@@ -36,7 +36,7 @@
         {
           "name": "TruepingAI",
           "desc": "AI cewek manja berbahasa Indonesia 🧸🎀",
-          "path": "/ai/luminai?text=",
+          "path": "/ai/truepingai?text=",
           "status": "ready",
           "params": {
             "text": "Teks yang ingin kamu tanyakan ke trueping"
@@ -126,37 +126,61 @@
           "name": "Capcut",
           "desc": "Downloader capcut",
           "status": "ready",
-          "path": "/download/capcut?apikey=&url="
+          "path": "/download/capcut?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL video capcut"
+          }
         },
         {
           "name": "Facebook",
           "desc": "Downloader facebook",
           "status": "ready",
-          "path": "/download/facebook?apikey=&url="
+          "path": "/download/facebook?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL video facebook"
+          }
         },        
         {
           "name": "Gitclone",
           "desc": "Downloader gitclone",
           "status": "ready",
-          "path": "/download/github?apikey=&url="
+          "path": "/download/github?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL repository github"
+          }
         },
         {
           "name": "Instagram",
           "desc": "Downloader instagram",
           "status": "ready",
-          "path": "/download/instagram?apikey=&url="
+          "path": "/download/instagram?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL video atau gambar instagram"
+          }
         },    
         {
           "name": "Snackvideo",
           "desc": "Downloader snackvideo",
           "status": "ready",
-          "path": "/download/snackvideo?apikey=&url="                 
+          "path": "/download/snackvideo?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL video snackvideo"
+          }
         },
         {
           "name": "Spotify",
           "desc": "Downloader spotify",
           "status": "ready",
-          "path": "/download/spotify?apikey=&url="
+          "path": "/download/spotify?apikey=&url=",
+          "params": {
+            "apikey": "API key kamu",
+            "url": "URL lagu spotify"
+          }
         }
       ]
     },
