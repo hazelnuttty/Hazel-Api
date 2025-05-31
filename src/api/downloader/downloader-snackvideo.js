@@ -51,25 +51,24 @@ async function snackvideo(url) {
     };
   } catch (error) {
     console.error('Error:', error);
+    throw new Error('Failed to fetch SnackVideo data');
   }
 }
 
 module.exports = function (app) {
-app.get('/download/snackvideo', async (req, res) => {
-        try {      
-        const { apikey } = req.query;
-            if (!global.apikey.includes(apikey)) return res.json({ status: false, error: 'Apikey invalid' })
-            const { url } = req.query;
-            if (!url) {
-                return res.json({ status: false, error: 'Url is required' });
-            }
-            const results = await snackvideo(url);
-            res.status(200).json({
-                status: true,
-                result: results
-            });
-        } catch (error) {
-            res.status(500).send(`Error: ${error.message}`);
-        }
-});
-}
+  app.get('/download/snackvideo', async (req, res) => {
+    const { url } = req.query;
+    if (!url) {
+      return res.json({ status: false, error: 'Url is required' });
+    }
+    try {
+      const results = await snackvideo(url);
+      res.status(200).json({
+        status: true,
+        result: results
+      });
+    } catch (error) {
+      res.status(500).send(`Error: ${error.message}`);
+    }
+  });
+};
