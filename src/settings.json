@@ -8,7 +8,7 @@
   },
   "apiSettings": {
     "creator": "Hazel",
-    "apikey": ["9xT7vLmQ2pZr"]
+    "apikey": ["velin"]
   },
   "categories": [
     {
@@ -88,7 +88,7 @@
        {
          "name": "TikTok Stalk",
          "desc": "Stalk account from tiktok",
-         "path": "/stalker/tiktok?username=",
+         "path": "/stalk/tiktok?username=",
          "params": {
          "username": "Masukan nama akun"
          }
@@ -96,7 +96,7 @@
        {
          "name": "Instagram Stalk",
          "desc": "Stalk account from instagram",
-         "path": "/stalker/instagram?username=",
+         "path": "/stalk/instagram?username=",
          "params": {
          "username": "Masukan nama akun"
          }
@@ -104,7 +104,7 @@
        {
          "name": "Free Fire Stalk",
          "desc": "Stalker akun ff kamu",
-         "path": "/stalker/ff",
+         "path": "/stalk/ff",
          "params": {
            "id": "Masukan id akun free fire mu"
          }
@@ -112,7 +112,7 @@
        {
          "name": "Npm Stalk",
          "desc": "Stalk Your account npm",
-         "path": "/stalker/npm?name=",
+         "path": "/stalk/npm?name=",
          "params": {
          "name": "Masukan nama account nya"
           }
