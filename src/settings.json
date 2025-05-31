@@ -182,7 +182,7 @@
       "name": "Search",
       "items": [
         {
-          "name": "YouTube",
+          "name": "Search YouTube",
           "desc": "Video search",
           "path": "/search/youtube?q=",
           "status": "ready",
@@ -241,7 +241,17 @@
           "path": "/search/pinterest/search?q=",
           "status": "comingsoon",
           "params": {
-            "q": "Keyword untuk mencari gambar di Pinterest"
+          "q": "Keyword untuk mencari gambar di Pinterest"
+          }
+        },
+        {
+          "name": "Cek Nomor",
+          "desc": "Lacak Lokasi Dan Provider",
+          "path": "/random/cek-nomor?apikey=&nomor=",
+          "status": "Active",
+          "params": {
+          "apikey": "API key milik kamu",
+          "nomorr": "Nomor yang ingin dilacak"
           }
         }
       ]
