@@ -13,7 +13,7 @@ module.exports = function(app) {
         }
     }
 
-    app.get('/ai/luminai', async (req, res) => {
+    app.get('/ai/truepingai', async (req, res) => {
         try {
             const { text } = req.query;
             if (!text) {
