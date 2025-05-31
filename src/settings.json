@@ -83,6 +83,43 @@
       ]
     },
     {
+      "name": "Stalker",
+      "items": [
+       {
+         "name": "TikTok Stalk",
+         "desc": "Stalk account from tiktok",
+         "path": "/stalker/ttstalk",
+         "params": {
+         "username": "Masukan nama akun"
+         }
+       },
+       {
+         "name": "Instagram Stalk",
+         "desc": "Stalk account from instagram",
+         "path": "/stalker/igstalk",
+         "params": {
+         "username": "Masukan nama akun"
+         }
+       },
+       {
+         "name": "Free Fire Stalk",
+         "desc": "Stalker akun ff kamu",
+         "path": "/stalker/ffstalk",
+         "params": {
+              "id": "Masukan id akun free fire mu"
+         }
+       },
+       {
+         "name": "Npm Stalk",
+         "desc": "Stalk Your account npm",
+         "path": "/stalker/npmstalk",
+         "params": {
+         "name": "Masukan nama account nya"
+          }
+        }
+      ]
+    },
+    {
       "name": "Tools",
       "items": [
         {
