@@ -88,7 +88,7 @@
        {
          "name": "TikTok Stalk",
          "desc": "Stalk account from tiktok",
-         "path": "/stalker/ttstalk",
+         "path": "/stalker/tiktok",
          "params": {
          "username": "Masukan nama akun"
          }
@@ -96,7 +96,7 @@
        {
          "name": "Instagram Stalk",
          "desc": "Stalk account from instagram",
-         "path": "/stalker/igstalk",
+         "path": "/stalker/instagram",
          "params": {
          "username": "Masukan nama akun"
          }
@@ -104,7 +104,7 @@
        {
          "name": "Free Fire Stalk",
          "desc": "Stalker akun ff kamu",
-         "path": "/stalker/ffstalk",
+         "path": "/stalker/ff",
          "params": {
               "id": "Masukan id akun free fire mu"
          }
@@ -112,7 +112,7 @@
        {
          "name": "Npm Stalk",
          "desc": "Stalk Your account npm",
-         "path": "/stalker/npmstalk",
+         "path": "/stalker/npm",
          "params": {
          "name": "Masukan nama account nya"
           }
