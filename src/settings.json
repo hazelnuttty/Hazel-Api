@@ -126,9 +126,8 @@
           "name": "Capcut",
           "desc": "downloader capcut",
           "status": "ready",
-          "path": "/downloaderer/capcut?apikey=&url=",
+          "path": "/downloaderer/capcut?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL video capcut"
           }
         },
@@ -136,9 +135,8 @@
           "name": "Facebook",
           "desc": "downloader facebook",
           "status": "ready",
-          "path": "/downloaderer/facebook?apikey=&url=",
+          "path": "/downloaderer/facebook?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL video facebook"
           }
         },        
@@ -146,9 +144,8 @@
           "name": "Gitclone",
           "desc": "downloader gitclone",
           "status": "ready",
-          "path": "/downloader/github?apikey=&url=",
+          "path": "/downloader/github?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL repository github"
           }
         },
@@ -156,9 +153,8 @@
           "name": "Instagram",
           "desc": "downloaderer instagram",
           "status": "ready",
-          "path": "/downloader/instagram?apikey=&url=",
+          "path": "/downloader/instagram?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL video atau gambar instagram"
           }
         },    
@@ -166,9 +162,8 @@
           "name": "Snackvideo",
           "desc": "downloaderer snackvideo",
           "status": "ready",
-          "path": "/downloader/snackvideo?apikey=&url=",
+          "path": "/downloader/snackvideo?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL video snackvideo"
           }
         },
@@ -176,9 +171,8 @@
           "name": "Spotify",
           "desc": "downloaderer spotify",
           "status": "ready",
-          "path": "/downloader/spotify?apikey=&url=",
+          "path": "/downloader/spotify?url=",
           "params": {
-            "apikey": "API key kamu",
             "url": "URL lagu spotify"
           }
         }
