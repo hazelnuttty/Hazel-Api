@@ -236,7 +236,16 @@
             "q": "Keyword untuk mencari video TikTok"
           }
         },
-        {
+        {        
+          "name": "Film Finder AI",
+          "desc": "Temukan film berdasarkan kriteria tertentu",
+          "path": "/search/filmfinder?q=",
+          "status": "ready",
+          "params": {
+          "apikey": "Masukan apikey milik kamu",          
+            "q": "Jenis film yang dicari (contoh: film horror tahun 90an)"
+        },
+        {        
           "name": "Search HappyMod",
           "desc": "Cari aplikasi modifikasi dari HappyMod",
           "path": "/search/happymod?q=",
@@ -285,7 +294,7 @@
           "name": "Cek Nomor",
           "desc": "Lacak Lokasi Dan Provider",
           "path": "/random/cek-nomor?apikey=&nomor=",
-          "status": "Active",
+          "status": "ready",
           "params": {
           "apikey": "API key milik kamu",
           "nomorr": "Nomor yang ingin dilacak"
