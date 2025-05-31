@@ -108,16 +108,16 @@
       "items": [
         {
           "name": "Pinterest",
-          "desc": "downloaderer images or videos from Pinterest",
+          "desc": "downloader images or videos from Pinterest",
           "path": "/downloader/pinterest",
           "status": "comingsoon",
           "params": {
-            "url": "Pinterest post URL to downloaderer"
+            "url": "Pinterest post URL to downloader"
           }
         },
         {
           "name": "Bilibili",
-          "desc": "downloaderer video from Bilibili",
+          "desc": "downloader video from Bilibili",
           "path": "/downloader/bilibili",
           "status": "comingsoon",
           "params": {}
@@ -126,7 +126,7 @@
           "name": "Capcut",
           "desc": "downloader capcut",
           "status": "ready",
-          "path": "/downloaderer/capcut?url=",
+          "path": "/downloader/capcut?url=",
           "params": {
             "url": "URL video capcut"
           }
@@ -135,7 +135,7 @@
           "name": "Facebook",
           "desc": "downloader facebook",
           "status": "ready",
-          "path": "/downloaderer/facebook?url=",
+          "path": "/downloader/facebook?url=",
           "params": {
             "url": "URL video facebook"
           }
@@ -151,7 +151,7 @@
         },
         {
           "name": "Instagram",
-          "desc": "downloaderer instagram",
+          "desc": "downloader instagram",
           "status": "ready",
           "path": "/downloader/instagram?url=",
           "params": {
@@ -160,7 +160,7 @@
         },    
         {
           "name": "Snackvideo",
-          "desc": "downloaderer snackvideo",
+          "desc": "downloader snackvideo",
           "status": "ready",
           "path": "/downloader/snackvideo?url=",
           "params": {
@@ -169,7 +169,7 @@
         },
         {
           "name": "Spotify",
-          "desc": "downloaderer spotify",
+          "desc": "downloader spotify",
           "status": "ready",
           "path": "/downloader/spotify?url=",
           "params": {
@@ -188,6 +188,51 @@
           "status": "ready",
           "params": {
             "q": "Search query"
+          }
+        },
+        {
+          "name": "Search TikTok",
+          "desc": "Cari video TikTok tanpa watermark via TikWM",
+          "path": "/search/tiktok?q=",
+          "status": "ready",
+          "params": {
+            "q": "Keyword untuk mencari video TikTok"
+          }
+        },
+        {
+          "name": "Search HappyMod",
+          "desc": "Cari aplikasi modifikasi dari HappyMod",
+          "path": "/search/happymod?q=",
+          "status": "ready",
+          "params": {
+            "q": "Nama aplikasi atau game yang dimodifikasi"
+          }
+        },
+        {
+          "name": "Search Bstation",
+          "desc": "Cari anime atau video dari Bstation (Bilibili)",
+          "path": "/search/bstation?q=",
+          "status": "ready",
+          "params": {
+            "q": "Judul anime atau video"
+          }
+        },
+        {
+          "name": "Search NPM",
+          "desc": "Cari package di npmjs.com",
+          "path": "/search/npm?q=",
+          "status": "ready",
+          "params": {
+            "q": "Nama package npm"
+          }
+        },
+        {
+          "name": "Search Playstore",
+          "desc": "Cari aplikasi dari Google Playstore",
+          "path": "/search/playstore?q=",
+          "status": "ready",
+          "params": {
+            "q": "Nama aplikasi yang ingin dicari"
           }
         },
         {
