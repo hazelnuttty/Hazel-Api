@@ -578,6 +578,316 @@
           "path": "/search/playstore?q=",
           "status": "ready",
           "params": {
+{
+  "name": "Hazel Api's",
+  "version": "v1.0.0",
+  "description": "Simple and easy to use API.",
+  "bannerImage": "/src/banner.jpg",
+  "header": {
+    "status": "Active!"
+  },
+  "apiSettings": {
+    "creator": "Hazel",
+    "apikey": ["H7z!pR#4xLm9@qW2"]
+  },
+  "categories": [
+    {
+      "name": "Artificial Intelligence",
+      "items": [
+        {
+          "name": "LuminAI",
+          "desc": "Talk with luminai",
+          "path": "/ai/luminai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for luminai to respond to"
+          }
+        },
+        {
+          "name": "HydroMind",
+          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
+          "path": "/ai/hydromind?text=&model=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau perintah untuk chat AI",
+            "model": "See the list of supported AI models here: https://mind.hydrooo.web.id"
+          }
+        },
+        {
+          "name": "TruepingAI",
+          "desc": "AI cewek manja berbahasa Indonesia 🧸🎀",
+          "path": "/ai/truepingai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks yang ingin kamu tanyakan ke trueping"
+          }
+        },
+        {
+          "name": "ChatGPT",
+          "desc": "Ngobrol dengan ChatGPT gratis tanpa API key",
+          "path": "/ai/chatgpt?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau pertanyaan kamu ke ChatGPT"
+            }
+          },
+          { 
+            "name": "OpenAi",
+            "desc": "Ai dari openai",
+            "path": "/ai/openai?text=",
+            "status": "ready",
+            "params": {
+              "text": "Masukan text"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": "Blue Archive Random Images",
+          "path": "/random/ba",
+          "status": "ready"
+        },
+        {
+          "name": "Cek Khodam",
+          "desc": "Random spiritual image generator",
+          "path": "/random/cekkhodam",
+          "status": "ready"
+        },
+        {
+          "name": "Neko",
+          "desc": "Random 100++ Picture Anime",
+          "path": "/random/neko",
+          "status": "ready"
+        },
+        {
+          "name": "Baskara",
+          "desc": "Random Teks Sad",
+          "path": "/random/katakata",
+          "status": "ready"          
+          }
+        }
+      ]
+    },
+    {
+      "name": "Waifulm",
+      "items": [
+        {
+          "name": "Ass",
+          "desc": "Ass Random Images",
+          "path": "/waifulm/ass",
+          "status": "ready"
+        },
+        {
+          "name": "",
+          "desc": "Milf Random Image",
+          "path": "/waifulm/milf",
+          "status": "ready"
+        },
+        {
+          "name": "Maid",
+          "desc": "Maid Random Image",
+          "path": "/waifulm/maid",
+          "status": "ready"
+        },
+        {
+          "name": "Waifu",
+          "desc": "Waifu Random Image",
+          "path": "/waifulm/waifu",
+          "status": "ready"                    
+        }
+      ]
+    },
+    {
+      "name": "Stalker",
+      "items": [
+       {
+         "name": "TikTok Stalk",
+         "desc": "Stalk account from tiktok",
+         "path": "/stalk/tiktok?username=",
+         "params": {
+         "username": "Masukan nama akun"
+         }
+       },
+       {
+         "name": "Instagram Stalk",
+         "desc": "Stalk account from instagram",
+         "path": "/stalk/instagram?username=",
+         "params": {
+         "username": "Masukan nama akun"
+         }
+       },
+       {
+         "name": "Free Fire Stalk",
+         "desc": "Stalker akun ff kamu",
+         "path": "/stalk/ff",
+         "params": {
+           "id": "Masukan id akun free fire mu"
+         }
+       },
+       {
+         "name": "Npm Stalk",
+         "desc": "Stalk Your account npm",
+         "path": "/stalk/npm?name=",
+         "params": {
+         "name": "Masukan nama account nya"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "items": [
+        {
+          "name": "Jadwal Sholat",
+          "desc": "Jadwal sholat hari ini di Sambas, Kalimantan Barat",
+          "path": "/sholat/sambas",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Cek Alamat IP",
+          "desc": "Cek info lokasi dan ISP dari alamat IP",
+          "path": "/tools/cek-ip?ip=",
+          "status": "ready",
+          "params": {
+            "ip": "Alamat IP yang ingin dicek"
+          }
+        }
+      ]
+    },
+    {
+      "name": "downloader",
+      "items": [
+        {
+          "name": "Pinterest",
+          "desc": "downloader images or videos from Pinterest",
+          "path": "/downloader/pinterest",
+          "status": "comingsoon",
+          "params": {
+            "url": "Pinterest post URL to downloader"
+          }
+        },
+        {
+          "name": "Bilibili",
+          "desc": "downloader video from Bilibili",
+          "path": "/downloader/bilibili",
+          "status": "comingsoon",
+          "params": {}
+        },
+        {
+          "name": "Capcut",
+          "desc": "downloader capcut",
+          "status": "ready",
+          "path": "/downloader/capcut?url=",
+          "params": {
+            "url": "URL video capcut"
+          }
+        },
+        {
+          "name": "Facebook",
+          "desc": "downloader facebook",
+          "status": "ready",
+          "path": "/downloader/facebook?url=",
+          "params": {
+            "url": "URL video facebook"
+          }
+        },        
+        {
+          "name": "Gitclone",
+          "desc": "downloader gitclone",
+          "status": "ready",
+          "path": "/downloader/github?url=",
+          "params": {
+            "url": "URL repository github"
+          }
+        },
+        {
+          "name": "Instagram",
+          "desc": "downloader instagram",
+          "status": "ready",
+          "path": "/downloader/instagram?url=",
+          "params": {
+            "url": "URL video atau gambar instagram"
+          }
+        },    
+        {
+          "name": "Snackvideo",
+          "desc": "downloader snackvideo",
+          "status": "ready",
+          "path": "/downloader/snackvideo?url=",
+          "params": {
+            "url": "URL video snackvideo"
+          }
+        },
+        {
+          "name": "Spotify",
+          "desc": "downloader spotify",
+          "status": "ready",
+          "path": "/downloader/spotify?url=",
+          "params": {
+            "url": "URL lagu spotify"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "items": [
+        {
+          "name": "Search YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q=",
+          "status": "ready",
+          "params": {
+            "q": "Search query"
+          }
+        },
+        {
+          "name": "Search TikTok",
+          "desc": "Cari video TikTok tanpa watermark via TikWM",
+          "path": "/search/tiktok?q=",
+          "status": "ready",
+          "params": {
+            "q": "Keyword untuk mencari video TikTok"
+          }
+        },
+        {
+          "name": "Search HappyMod",
+          "desc": "Cari aplikasi modifikasi dari HappyMod",
+          "path": "/search/happymod?q=",
+          "status": "ready",
+          "params": {
+            "q": "Nama aplikasi atau game yang dimodifikasi"
+          }
+        },
+        {
+          "name": "Search Bstation",
+          "desc": "Cari anime atau video dari Bstation (Bilibili)",
+          "path": "/search/bstation?q=",
+          "status": "ready",
+          "params": {
+            "q": "Judul anime atau video"
+          }
+        },
+        {
+          "name": "Search NPM",
+          "desc": "Cari package di npmjs.com",
+          "path": "/search/npm?q=",
+          "status": "ready",
+          "params": {
+            "q": "Nama package npm"
+          }
+        },
+        {
+          "name": "Search Playstore",
+          "desc": "Cari aplikasi dari Google Playstore",
+          "path": "/search/playstore?q=",
+          "status": "ready",
+          "params": {
             "q": "Nama aplikasi yang ingin dicari"
           }
         },
@@ -587,7 +897,7 @@
           "path": "/search/pinterest/search?q=",
           "status": "comingsoon",
           "params": {
-            "q": "Keyword untuk mencari gambar di Pinterest"
+          "q": "Keyword untuk mencari gambar di Pinterest"
           }
         },
         {
@@ -596,8 +906,8 @@
           "path": "/random/cek-nomor?apikey=&nomor=",
           "status": "ready",
           "params": {
-            "apikey": "API key milik kamu",
-            "nomor": "Nomor yang ingin dilacak"
+          "apikey": "API key milik kamu",
+          "nomor": "Nomor yang ingin dilacak"
           }
         }
       ]
