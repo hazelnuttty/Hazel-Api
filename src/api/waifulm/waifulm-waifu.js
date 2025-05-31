@@ -12,7 +12,7 @@ module.exports = function(app) {
         }
     }
 
-    app.get('/random/ba', async (req, res) => {
+    app.get('/waifulm/waifu', async (req, res) => {
         try {
             const image = await getWaifuImage();
             res.writeHead(200, {
