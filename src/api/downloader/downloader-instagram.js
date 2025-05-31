@@ -44,7 +44,7 @@ async function igdl(url) {
         }
     });
 
-    const urlParams = new URLSearchParams(downloadUrls[0]?.split('?')[1]); // Ambil filename dari URL pertama
+    const urlParams = new URLSearchParams(downloadUrls[0]?.split('?')[1]);
     let filename = urlParams.get('filename');
     if (filename && filename.endsWith('.mp4')) {
         filename = filename.slice(0, -4);
@@ -58,13 +58,11 @@ async function igdl(url) {
 }
 
 module.exports = function (app) {
-app.get('/download/instagram', async (req, res) => {
-       const { apikey } = req.query;
-            if (!global.apikey.includes(apikey)) return res.json({ status: false, error: 'Apikey invalid' })
-       const { url } = req.query;
-            if (!url) {
- return res.json({ status: false, error: 'Url is required' });
-            }
+    app.get('/download/instagram', async (req, res) => {
+        const { url } = req.query;
+        if (!url) {
+            return res.json({ status: false, error: 'Url is required' });
+        }
         try {
             const results = await igdl(url);
             res.status(200).json({
@@ -74,5 +72,5 @@ app.get('/download/instagram', async (req, res) => {
         } catch (error) {
             res.status(500).send(`Error: ${error.message}`);
         }
-});
-}
+    });
+};
